@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* berapa nilai spescificity dari selektor dibawah ini ? */
+    /* 10 + 1 + 10 = 21 */
+    .container h1.title{
+      color: red;
+    }
+    /* berapakan nilai specificity dari selektor dibawah ini ? */
+    /* 100 + 10 + 10 = 120 */
+    #hero .container .title{
+      color: blue;
+    }
+    /* dari seloktor di atas styling color yg digunakan merah atau biru? */
+
+  /*  231 */
+  /* 100+ 100 + 10 + 10 + 10 + 1 = 231 */
+    #hero #sidebar .menu .list .item h1{
+      color: green;
+    }
+
+    /* 220 */
+    /* 223 */
+    /* 1 + 100 + 1 + 100 + 10 + 1 + 10 = 223 */
+    div#hero div#sidebar .menu li.item{
+      color: red;
+    }
+
+  
+    .item h1{
+      color: yellow !important;
+    }
+    /* warna apa yg diterapkan */
+    /* kuning */
+    /* kuning */
+  </style>
+</head>
+<body>
+  <div id="hero">
+    <div class="container">
+      <h1 class="title">helo world</h1>
+    </div>
+    <div id="sidebar">
+      <div class="menu">
+        <ul class="list">
+          <li class="item">
+            <h1>Menu :</h1>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ 
+</body>
+</html>
